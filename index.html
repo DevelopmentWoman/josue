@@ -6,11 +6,13 @@
     <title>Document</title>
 </head>
 <style>
+    @import url(https://fonts.googleapis.com/css?family=Varela+Round);
     *{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
+
     
     @media (min-width: 350px) {
     .container{
@@ -18,18 +20,36 @@
         position: relative;
         overflow: hidden;
     }
+
+
+
+
+
+
     .cohete{
         position: absolute;
         left: -5%;
         bottom:-10%;
-        width: 20%;
-        height: 30%;
+        width: 10%;
+        height: 15%;
         transform: rotate(45deg);
         opacity: 0;
-        animation: volar-cohete 4s 4s linear both;
+        animation: volar-cohete 15s 1s linear both infinite;
+    }
+    .cohete1{
+        position: absolute;
+        right: -5%;
+        top:-10%;
+        width: 10%;
+        height: 15%;
+        transform: rotate(200deg);
+        animation: volar-cohete1 15s 1s linear both infinite;
     }
     .cohete>img{
-        width: 80%;
+        width: 20%;
+    }
+    .cohete1>img{
+        width: 20%;
     }
     .bg{
         position: absolute;
@@ -39,27 +59,10 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        clip-path: circle(0.4% at 0 100%);
-        animation: bg-aparecer 1s linear both;
         z-index: -1;
     }
 
-    .luna{
-        position: absolute;
-        top: 15%;
-        left: 10%;
-        height: 7%;
-        width: 15%;
-        background-image: url(luna-removebg-preview.png); 
-        background-size: contain;
-        background-repeat: no-repeat; 
-        background-position: center;
-        transform: rotate(90%) scale(0);
-        
-        /* clip-path: circle(0.4% at 0 100%); */
-        animation: scale 2s  1s linear both infinite;
-        z-index: 1;
-    }
+
     .title{
         top: 10%;
         position: absolute;
@@ -67,33 +70,19 @@
         color: rgb(50, 177, 200);
         text-align: center;
         font-size: 2rem;
-        animation: scale 2s  1s linear both infinite;
+
     }
     .cont-jos{
         position: relative;
         display: flex;
         justify-content: center;
         top: 30%;
-        left: 15%;
-        width: 60%;
-        height: 40%;
+        left: 10%;
+        width: 80%;
+        height: 50%;
         animation: transy 10s linear both infinite;
     }
-    .atro{
-        position: absolute;
-        top: -10%;
-        left: 0;
-        width: 90%;
-        height: 90%;
-    }
-    .josue{
-        position: absolute;
-        width: 22%;
-        top: 9%;
-        left: 35%;
-        transform: rotate(-15deg);
 
-    }
 
 }
   
@@ -127,29 +116,148 @@
             transform: rotate(30deg);
         }
     }
+    @keyframes volar-cohete1 {
+        10%{
+            opacity: 1;
+            top: 10%;
+            right: 10%;
+            transform: rotate(210deg);
+        }
+        25%{
+            top: 20%;
+            right: 40%;
+            transform: rotate(230deg);
+        }
+        50%{
+            top: 40%;
+            right: 60%;
+            transform: rotate(250deg);
+        }
+        75%{
+            top: 55%;
+            right: 70%;
+            /* transform: rotate(25deg); */
+        }
+        100%{
+            opacity: 1;
+            top: 120%;
+            right: 100%;
+            /* transform: rotate(30deg); */
+        }
+    }
     .nav1{
         position: absolute;
         top: 20%;
-        width: 20%;
-        height: 25%;
+        width: 5%;
+        height: 5%;
         background-image: url(nave_esp_mar-removebg-preview.png);
         background-size: contain;
         background-repeat: no-repeat;
-        animation: transxnav1 5s 1s linear both infinite;
+        animation: transxnav1 15s 5s linear both infinite;
     }
     .nav2{
         position: absolute;
         top: 40%;
-        right: 0%;
-        width: 20%;
-        height: 25%;
+        right: 5%;
+        width: 5%;
+        height: 5%;
         background-image: url(nave_esp_mar-removebg-preview.png);
         background-size: contain;
         background-repeat: no-repeat;
-        animation: transxnav2 5s 1s linear both infinite;
+        animation: transxnav2 10s 3s linear both infinite;
 
     }
+    h2 {
+        color: rgb(58, 26, 201);
+        font: normal 2rem Varela Round, sans-serif;
+        height: 5rem;
+        left: 0;
+        letter-spacing: 5px;
+        margin: -80px 0 0 0;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        top: 20%;
+        width: 100%;
+        animation: move linear 15s infinite;  
+    }
+    h5{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 10%;
+        color: rgb(44, 159, 236);
+        font: normal 1rem Varela Round, sans-serif;
 
+    }
+    h5>span{
+        color: rgb(58, 26, 201);
+        font-size:1.5rem;
+        animation: move linear 15s infinite;
+    }
+
+@keyframes move {
+  0% {
+    text-shadow:
+      4px -4px 0 rgb(46, 219, 231), 
+      3px -3px 0 rgb(144, 39, 230), 
+      2px -2px 0 rgb(231, 228, 46), 
+      1px -1px 0 rgb(231, 228, 46),
+      -4px 4px 0 rgb(44, 159, 236), 
+      -3px 3px 0 rgb(44, 159, 236), 
+      -2px 2px 0 rgb(44, 159, 236), 
+      -1px 1px 0 rgb(44, 159, 236)
+    ;
+  }
+  25% {    
+    text-shadow:      
+      -4px -4px 0 rgb(44, 159, 236), 
+      -3px -3px 0 rgb(44, 159, 236), 
+      -2px -2px 0 rgb(44, 159, 236), 
+      -1px -1px 0 rgb(44, 159, 236),
+      4px 4px 0 rgb(231, 228, 46), 
+      3px 3px 0 rgb(231, 228, 46), 
+      4px -4px 0 rgb(46, 219, 231), 
+      3px -3px 0 rgb(144, 39, 230),      
+    ;
+  }
+  50% {
+    text-shadow:
+      -4px 4px 0 rgb(231, 228, 46), 
+      -3px 3px 0 rgb(231, 228, 46), 
+      -2px 2px 0 rgb(231, 228, 46), 
+      -1px 1px 0 rgb(231, 228, 46),
+      4px -4px 0 rgb(44, 159, 236), 
+      3px -3px 0 rgb(44, 159, 236), 
+      2px -2px 0 rgb(44, 159, 236), 
+      1px -1px 0 rgb(44, 159, 236)
+    ;
+  }
+  75% {
+    text-shadow:
+      4px 4px 0 rgb(44, 159, 236), 
+      3px 3px 0 rgb(44, 159, 236), 
+      2px 2px 0 rgb(44, 159, 236), 
+      1px 1px 0 rgb(44, 159, 236),
+      -4px -4px 0 rgb(231, 228, 46), 
+      -3px -3px 0 rgb(231, 228, 46), 
+      -2px -2px 0 rgb(231, 228, 46), 
+      -1px -1px 0 rgb(231, 228, 46)      
+    ;
+  }
+  100% {
+    text-shadow:
+      4px -4px 0 rgb(231, 228, 46), 
+      3px -3px 0 rgb(231, 228, 46), 
+      2px -2px 0 rgb(231, 228, 46), 
+      1px -1px 0 rgb(231, 228, 46),
+      -4px 4px 0 rgb(44, 159, 236), 
+      -3px 3px 0 rgb(44, 159, 236), 
+      -2px 2px 0 rgb(44, 159, 236), 
+      -1px 1px 0 rgb(44, 159, 236)
+    ;
+  }  
+}
 
         @keyframes bg-aparecer {
         10%{
@@ -199,15 +307,15 @@
     }       
     @keyframes transxnav1 {
         0%{
-            left:0;
+            left:-20%;
             transform: translateY(0) 
         }
         50%{
-
+            left: 40%;
             transform: translateY(50%);
         }
         100%{
-            left: 100%;
+            left: 110%;
             transform: translateY(0%);
         }
         
@@ -219,32 +327,38 @@
             transform: translateY(0) 
         }
         50%{
-
-            transform: translateY(50%);
+            left: 50%;
+            transform: translateY(60%);
         }
         100%{
-            left: 0%;
+            left: -20%;
             transform: translateY(0%);
         }
+
         
     }
             
-
+    audio{
+        display: none;
+    }
 </style>
 <body>
     <div class="container">
         <div class="bg"></div>
+        <h2>Te invito a mi cumpleaños <br> el día 20/01/2023 <br> a las 2pm</h2>
         <div class="cohete"><img src="cohete-removebg-preview.png" alt=""></div>
-        <div class="luna"></div>
-        <div class="title">Te invito a mi fiesta <br>el día 20/01/2024</div>
+        <div class="cohete1"><img src="cohete-removebg-preview.png" alt=""></div>
         <div class="nav1"></div>
 
         <div class="cont-jos">
-            <img class = "atro" src="josue_ast (2).png" alt="">
-            <!-- <img class = "josue" src="josue.png" alt=""> -->
+            <img class = "atro" src="josue_astro.svg" alt="">
         </div>
         <div class="nav2"></div>
+        <audio id="myAudio" autoplay="true">
+            <source src="cumpleaños.mp3" type="audio/mpeg">
+        </audio>
+        <h5>Residencias Buena Vista, edificio 1C apto 1C-14 <br> <span>Te esperamos</span></h5>
     </div>
-    
+ 
 </body>
 </html>
