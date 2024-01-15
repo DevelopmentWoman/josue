@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    @media (min-width: 350px) {
+    .container{
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+    .cohete{
+        position: absolute;
+        left: -5%;
+        bottom:-10%;
+        width: 20%;
+        height: 30%;
+        transform: rotate(45deg);
+        opacity: 0;
+        animation: volar-cohete 4s 4s linear both;
+    }
+    .cohete>img{
+        width: 80%;
+    }
+    .bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(bg.jpg); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        clip-path: circle(0.4% at 0 100%);
+        animation: bg-aparecer 1s linear both;
+        z-index: -1;
+    }
+
+    .luna{
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        height: 7%;
+        width: 15%;
+        background-image: url(luna-removebg-preview.png); 
+        background-size: contain;
+        background-repeat: no-repeat; 
+        background-position: center;
+        transform: rotate(90%) scale(0);
+        
+        /* clip-path: circle(0.4% at 0 100%); */
+        animation: scale 2s  1s linear both infinite;
+        z-index: 1;
+    }
+    .title{
+        top: 10%;
+        position: absolute;
+        width: 100%;
+        color: rgb(50, 177, 200);
+        text-align: center;
+        font-size: 2rem;
+        animation: scale 2s  1s linear both infinite;
+    }
+    .cont-jos{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top: 30%;
+        left: 15%;
+        width: 60%;
+        height: 40%;
+        animation: transy 10s linear both infinite;
+    }
+    .atro{
+        position: absolute;
+        top: -10%;
+        left: 0;
+        width: 90%;
+        height: 90%;
+    }
+    .josue{
+        position: absolute;
+        width: 22%;
+        top: 9%;
+        left: 35%;
+        transform: rotate(-15deg);
+
+    }
+
+}
+  
+
+    @keyframes volar-cohete {
+        10%{
+            opacity: 1;
+            bottom: 10%;
+            left: 10%;
+            transform: rotate(50deg);
+        }
+        25%{
+            bottom: 20%;
+            left: 40%;
+            transform: rotate(45deg);
+        }
+        50%{
+            bottom: 40%;
+            left: 60%;
+            transform: rotate(35deg);
+        }
+        75%{
+            bottom: 55%;
+            left: 70%;
+            transform: rotate(25deg);
+        }
+        100%{
+            opacity: 1;
+            bottom: 120%;
+            left: 100%;
+            transform: rotate(30deg);
+        }
+    }
+    .nav1{
+        position: absolute;
+        top: 20%;
+        width: 20%;
+        height: 25%;
+        background-image: url(nave_esp_mar-removebg-preview.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: transxnav1 5s 1s linear both infinite;
+    }
+    .nav2{
+        position: absolute;
+        top: 40%;
+        right: 0%;
+        width: 20%;
+        height: 25%;
+        background-image: url(nave_esp_mar-removebg-preview.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: transxnav2 5s 1s linear both infinite;
+
+    }
+
+
+        @keyframes bg-aparecer {
+        10%{
+            clip-path: circle(30.9% at 0 100%);
+        }
+        25%{
+            clip-path: circle(60.2% at 0 100%);
+        }
+        50%{
+            clip-path: circle(86.4% at 0 100%);
+        }
+        75%{
+            clip-path: circle(126.0% at 0 100%);
+        }
+        100%{
+            clip-path: circle(141.4% at 0 100%);
+        }
+
+    }
+    @keyframes scale {
+            0%{
+                transform: scale(0.9);
+            }
+            50%{
+                transform: scale(1);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(.9);
+            }
+        }
+    @keyframes transy {
+            0%{
+                transform: translateY(0) translateX(0);
+            }
+            25%{
+                transform: translateY(2rem) translateX(-1rem);
+            }
+            50%{
+                transform: translateY(1rem) translateX(1rem);
+            }
+            100%{
+                
+                transform: translateY(0) translateX(0);
+            }
+            
+    }       
+    @keyframes transxnav1 {
+        0%{
+            left:0;
+            transform: translateY(0) 
+        }
+        50%{
+
+            transform: translateY(50%);
+        }
+        100%{
+            left: 100%;
+            transform: translateY(0%);
+        }
+        
+    }
+
+    @keyframes transxnav2 {
+        0%{
+            left:100%;
+            transform: translateY(0) 
+        }
+        50%{
+
+            transform: translateY(50%);
+        }
+        100%{
+            left: 0%;
+            transform: translateY(0%);
+        }
+        
+    }
+            
+
+</style>
+<body>
+    <div class="container">
+        <div class="bg"></div>
+        <div class="cohete"><img src="cohete-removebg-preview.png" alt=""></div>
+        <div class="luna"></div>
+        <div class="title">Te invito a mi fiesta <br>el día 20/01/2024</div>
+        <div class="nav1"></div>
+
+        <div class="cont-jos">
+            <img class = "atro" src="josue_ast (2).png" alt="">
+            <!-- <img class = "josue" src="josue.png" alt=""> -->
+        </div>
+        <div class="nav2"></div>
+    </div>
+    
+</body>
+</html>
